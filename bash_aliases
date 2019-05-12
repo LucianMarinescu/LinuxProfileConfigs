@@ -1,6 +1,9 @@
 alias ..="cd .."
 alias p="cd -"
+
+alias g="git"
 alias gs="git status"
+alias gdc="git difftool -d --cached"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

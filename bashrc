@@ -65,7 +65,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-parse_git_branch() {
+show_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
@@ -74,9 +74,9 @@ if [ "$color_prompt" = yes ]; then
         . ~/.bash_colors
     fi
 
-    PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h ${BLUE}\w${YELLOW}$(parse_git_branch)${NORMAL} \$ "
+    PS1="\D{%T} ${debian_chroot:+($debian_chroot)}${GREEN}\u@\h ${BLUE}\w${YELLOW}$(show_git_branch)${NORMAL} \$ "
 else
-    PS1="${debian_chroot:+($debian_chroot)}\u@\h \w$(parse_git_branch) \$"
+    PS1="\D{%T} ${debian_chroot:+($debian_chroot)}\u@\h \w$(parse_git_branch) \$"
 fi
 unset color_prompt force_color_prompt
 
