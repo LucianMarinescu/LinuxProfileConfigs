@@ -76,7 +76,7 @@ if [ "$color_prompt" = yes ]; then
 
     PS1="\D{%T} ${debian_chroot:+($debian_chroot)}${GREEN}\u@\h ${BLUE}\w${YELLOW}$(show_git_branch)${NORMAL} \$ "
 else
-    PS1="\D{%T} ${debian_chroot:+($debian_chroot)}\u@\h \w$(parse_git_branch) \$"
+    PS1="\D{%T} ${debian_chroot:+($debian_chroot)}\u@\h \w$(show_git_branch) \$"
 fi
 unset color_prompt force_color_prompt
 
