@@ -22,7 +22,7 @@ alias ll='ls -lF'
 alias la='ls -A'
 alias lla='ls -alF'
 alias l='ls -CF'
-alias l1='ls -1'
+alias l1='ls -1F'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
